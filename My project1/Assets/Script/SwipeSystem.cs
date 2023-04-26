@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class SwipeSystem : MonoBehaviour
 {
-
     private Vector2 initialPos;
 
-       // Update is called once per frame
+    // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButtonDown(0)) initialPos = Input.mousePosition;
-        if(Input.GetMouseButtonUp(0)) Calculate(Input.mousePosition);
+
+        if (Input.GetMouseButtonDown(0)) initialPos = Input.mousePosition;
+        if (Input.GetMouseButtonUp(0)) Calculate(Input.mousePosition);
+        
     }
 
     void Calculate(Vector3 finalPos)
@@ -21,7 +22,7 @@ public class SwipeSystem : MonoBehaviour
 
         if(disX > 0 || disY > 0)
         {
-            if (disX > disY)
+            if(disX>disY)
             {
                 if (initialPos.x > finalPos.x) Debug.Log("Left");
                 else Debug.Log("Right");
