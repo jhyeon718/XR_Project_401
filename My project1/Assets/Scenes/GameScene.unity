@@ -372,7 +372,7 @@ GameObject:
   - component: {fileID: 408780260}
   m_Layer: 0
   m_Name: Gamemanager
-  m_TagString: Untagged
+  m_TagString: GameManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -392,6 +392,8 @@ MonoBehaviour:
   hudText: {fileID: 811681638}
   character: {fileID: 1132705367}
   offset: {x: 0, y: 15, z: 0}
+  HudTextUp: {fileID: 2326507298404334332, guid: 099d1f2cbb2819747adf607c71f5fd1d, type: 3}
+  canvasObject: {fileID: 518163479}
 --- !u!4 &408780261
 Transform:
   m_ObjectHideFlags: 0
@@ -746,7 +748,7 @@ GameObject:
   - component: {fileID: 811681639}
   - component: {fileID: 811681638}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: Player_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -793,7 +795,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: e0b8b009cc5773c4f8f9db408a497f59, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -910,7 +912,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71f9d9edf26fac943b89285d8b2fd28b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Hp: 5
+  Hp: 15
 --- !u!1 &1237624991
 GameObject:
   m_ObjectHideFlags: 0
