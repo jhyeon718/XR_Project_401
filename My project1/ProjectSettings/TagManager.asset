@@ -8,6 +8,8 @@ TagManager:
   - Monster
   - Ground
   - GameManager
+  - FxTemporaire
+  - UIHealthBar
   layers:
   - Default
   - TransparentFX
@@ -44,7 +46,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Ground
-    uniqueID: 746496925
     locked: 0
