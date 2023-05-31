@@ -15,4 +15,3 @@ MonoBehaviour:
   audioType: 3
   randomClipList:
   - {fileID: 8300000, guid: af66162561d2eed40ad49268cab318bb, type: 3}
-  - {fileID: 8300000, guid: 8401456349c492a489ed90469e317e43, type: 3}

@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;               //UI사용 
 public class HUDTextManager : MonoBehaviour
 {
+    protected GameManager GameManager => GameManager.Instance;
+
     public Text hudText;
     public GameObject character;                //캐릭터 게임 오브젝트를 참조
     public Vector3 offset;                      //캐릭터 머리 위에 텍스트를 표시할 오프셋
@@ -27,11 +29,14 @@ public class HUDTextManager : MonoBehaviour
 
     public void UpdateHUDTextSet(string newText , GameObject target, Vector3 TargetOffset)
     {
-        Vector3 TargetPosition = target.transform.position;
-        Vector3 screenPosition = Camera.main.WorldToScreenPoint(TargetPosition);         //3D Position -> 2D 
-        GameObject temp = (GameObject)Instantiate(HudTextUp);
-        temp.transform.SetParent(canvasObject.transform, false);
-        temp.transform.position = screenPosition + TargetOffset;
-        temp.GetComponent<HUDMove>().textUI.text = newText;
+        if(GameManager.currentState != GameManager.GameState.GameOver)
+        {
+            Vector3 TargetPosition = target.transform.position;
+            Vector3 screenPosition = Camera.main.WorldToScreenPoint(TargetPosition);         //3D Position -> 2D 
+            GameObject temp = (GameObject)Instantiate(HudTextUp);
+            temp.transform.SetParent(canvasObject.transform, false);
+            temp.transform.position = screenPosition + TargetOffset;
+            temp.GetComponent<HUDMove>().textUI.text = newText;
+        }     
     }
 }
